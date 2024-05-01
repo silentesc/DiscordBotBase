@@ -1,6 +1,6 @@
 {
     "name": "bot_base",
-    "description": "A simple bot structure with help and ping command.",
+    "description": "A simple discord bot structure using TypeScript and discord.js with working help and ping slash commands.",
     "version": "1.0.0",
     "author": "silentesc",
     "main": "dist/main.js",
