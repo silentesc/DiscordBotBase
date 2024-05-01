@@ -16,8 +16,8 @@ const client = new Client({ intents: [] });
 client.on("ready", c => {
     console.log(`Logged in as ${c.user.tag}`);
     client.user?.setActivity({
-        name: "Use /help",
-        type: ActivityType.Custom
+        name: "/help",
+        type: ActivityType.Watching
     });
 });
 
@@ -30,11 +30,14 @@ client.on("interactionCreate", async interaction => {
         try {
             await command.execute(client, interaction);
         }
-        catch (error: any) {
+        catch (error) {
             const timestamp = new Date().toISOString().replace('T', ' ').replace(/\..+/, '');
-            console.log(
-                `[${timestamp}] Catched error\nExecuter: ${interaction.user.tag}\nCommand: ${interaction.commandName}\nOptions: ${interaction.options.data}\n${error.stack}\nEnd of error`
-            );
+            console.log(`[${timestamp}] Catched error`);
+            console.log("Executer:", interaction.user.tag);
+            console.log("Command:", interaction.commandName);
+            console.log("Options:", interaction.options.data);
+            console.log(error);
+            console.log("End of error");
 
             const responseEmbed = new EmbedBuilder()
                 .setColor(0xfa4b4b)

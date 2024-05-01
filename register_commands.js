@@ -1,12 +1,33 @@
-const { REST, Routes } = require("discord.js");
+const { REST, Routes, ApplicationCommandOptionType } = require("discord.js");
 require("dotenv").config();
 
 
 const commands = [
     {
         name: "ping",
-        description: "Replies with Pong!",
+        description: "Shows the client & websocket latency.",
     },
+    {
+        name: "help",
+        description: "Displays the Help Page.",
+        options: [
+            {
+                name: "command",
+                description: "The specific command to view.",
+                type: ApplicationCommandOptionType.String,
+                choices: [
+                    {
+                        name: "help",
+                        value: "help",
+                    },
+                    {
+                        name: "ping",
+                        value: "ping",
+                    },
+                ]
+            }
+        ]
+    }
 ];
 
 const rest = new REST({ version: "10" }).setToken(process.env.TOKEN);
