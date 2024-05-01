@@ -1,15 +1,15 @@
 {
-    "name": "test_bot",
+    "name": "bot_base",
+    "description": "A simple bot structure with help and ping command.",
     "version": "1.0.0",
+    "author": "silentesc",
     "main": "dist/main.js",
     "scripts": {
         "dev": "tsx watch src/main.ts",
         "build": "tsc",
         "start": "node . >> log.txt"
     },
-    "author": "silentesc",
     "license": "ISC",
-    "description": "",
     "dependencies": {
         "discord.js": "^14.14.1",
         "dotenv": "^16.4.5"
