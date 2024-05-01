@@ -8,15 +8,15 @@ module.exports = {
         const responseEmbed = new EmbedBuilder()
         let helpPage;
 
-        if (!command) {
-            helpPage = readFileSync("./src/txt/general_help.txt").toString();
-            responseEmbed
-                .setTitle("Help Page");
-        }
-        else {
+        if (command) {
             helpPage = readFileSync(`./src/txt/help_specific_commands/${command}.txt`).toString();
             responseEmbed
                 .setTitle(`Help for: /${command}`);
+        }
+        else {
+            helpPage = readFileSync("./src/txt/general_help.txt").toString();
+            responseEmbed
+                .setTitle("Help Page");
         }
 
         responseEmbed
