@@ -5,7 +5,7 @@
     "scripts": {
         "dev": "tsx watch src/main.ts",
         "build": "tsc",
-        "start": "node ."
+        "start": "node . >> log.txt"
     },
     "author": "silentesc",
     "license": "ISC",
