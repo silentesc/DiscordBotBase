@@ -1,4 +1,4 @@
-import { Client, ActivityType, EmbedBuilder } from "discord.js";
+import { Client, ActivityType, EmbedBuilder, MessageFlags } from "discord.js";
 import { readdirSync } from "fs";
 import "dotenv/config";
 
@@ -43,7 +43,7 @@ client.on("interactionCreate", async interaction => {
                 .setColor(0xfa4b4b)
                 .setTitle("❗Error❗")
                 .setDescription("An unexpected error occured while executing that command.\n**Please contact an admin or dev so it can be fixed!**");
-            await interaction.reply({ embeds: [responseEmbed], ephemeral: true });
+            await interaction.reply({ embeds: [responseEmbed], flags: MessageFlags.Ephemeral });
         }
     }
 });
