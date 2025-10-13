@@ -1,4 +1,5 @@
 # Project files
+package-lock.json
 node_modules/
 
 # Target files
@@ -6,3 +7,9 @@ dist/
 
 # Secrets
 .env
+
+# Coverage directory used by testing tools
+coverage
+
+# Visual Studio Code configuration
+.vscode/
