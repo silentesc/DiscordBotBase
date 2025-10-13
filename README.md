@@ -3,7 +3,7 @@
 ## Installation:
 - Clone the code
 - Open a terminal and execute `npm install`
-- Create a `.env` file for the `TOKEN` and `CLIENT_ID`
+- Create a `.env` file (`.env.example`)
 
 ## Features:
 - Standalone script for creating slash commands.
