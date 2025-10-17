@@ -12,12 +12,12 @@
         "register": "node register_commands.js"
     },
     "dependencies": {
-        "discord.js": "^14.14.1",
-        "dotenv": "^16.4.5"
+        "discord.js": "^14.23.2",
+        "dotenv": "^17.2.3"
     },
     "devDependencies": {
-        "@types/node": "^20.12.7",
-        "typescript": "^5.8.2",
-        "tsx": "^4.7.3"
+        "@types/node": "^24.8.1",
+        "typescript": "^5.9.3",
+        "tsx": "^4.20.6"
     }
 }
