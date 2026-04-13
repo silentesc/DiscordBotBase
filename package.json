@@ -13,11 +13,11 @@
         "update_packages": "npm update --save"
     },
     "dependencies": {
-        "discord.js": "^14.25.1",
-        "dotenv": "^17.2.3"
+        "discord.js": "^14.26.2",
+        "dotenv": "^17.4.2"
     },
     "devDependencies": {
-        "@types/node": "^24.10.9",
+        "@types/node": "^24.12.2",
         "tsx": "^4.21.0",
         "typescript": "^5.9.3"
     }
